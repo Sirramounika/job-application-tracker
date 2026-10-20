@@ -4,11 +4,17 @@
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
+
 print("================================")
 print("     JOB APPLICATION TRACKER")
 print("================================")
 
-print("Welcome! Let's track your job search.")
+company = input("Enter company name: ")
+role = input("Enter job role: ")
+status = input("Enter application status: ")
 
 print()
-print("Your job tracker is ready to build!")
+print("----- Application Details -----")
+print("Company:", company)
+print("Job Role:", role)
+print("Status:", status)
