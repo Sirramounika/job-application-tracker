@@ -8,13 +8,31 @@
 print("================================")
 print("     JOB APPLICATION TRACKER")
 print("================================")
+applications = []
 
-company = input("Enter company name: ")
-role = input("Enter job role: ")
-status = input("Enter application status: ")
+while True:
+    print("\n--- Job Application Tracker ---")
+    company = input("Enter company name (or 'stop' to finish): ")
 
-print()
-print("----- Application Details -----")
-print("Company:", company)
-print("Job Role:", role)
-print("Status:", status)
+    if company.lower() == "stop":
+        break
+
+    role = input("Enter job role: ")
+    status = input("Enter application status: ")
+
+    application = {
+        "company": company,
+        "role": role,
+        "status": status
+    }
+
+    applications.append(application)
+
+print("\n--- Your Job Applications ---")
+
+for app in applications:
+    print("Company:", app["company"])
+    print("Role:", app["role"])
+    print("Status:", app["status"])
+    print("--------------------")
+
